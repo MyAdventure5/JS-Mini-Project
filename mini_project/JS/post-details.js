@@ -1,6 +1,6 @@
 function fetchPostDetails() {
-    let urlParametr = new URLSearchParams(window.location.search);
-    let postId = urlParametr.get('postId');
+    let urlParams = new URLSearchParams(window.location.search);
+    let postId = urlParams.get('postId');
 
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
         .then(response => response.json())
@@ -26,6 +26,7 @@ function fetchPostComments() {
                 let commentElement = document.createElement('div');
                 commentElement.classList.add('comment');
                 commentElement.innerHTML = `
+
                             <p class="comment-name">${comment.name}</p>
                             <p>${comment.body}</p>
                         `;
