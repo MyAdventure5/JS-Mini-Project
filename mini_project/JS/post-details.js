@@ -6,7 +6,7 @@ function fetchPostDetails() {
         .then(response => response.json())
         .then(post => {
             let postDetailsElement = document.getElementById('postDetails');
-            postDetailsElement.innerHTML = `
+                postDetailsElement.innerHTML = `
                         <h2>${post.title}</h2>
                         <p>${post.body}</p>
                     `;
