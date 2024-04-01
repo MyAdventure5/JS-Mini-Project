@@ -26,7 +26,6 @@ function fetchPostComments() {
                 let commentElement = document.createElement('div');
                 commentElement.classList.add('comment');
                 commentElement.innerHTML = `
-
                             <p class="comment-name">${comment.name}</p>
                             <p>${comment.body}</p>
                         `;
